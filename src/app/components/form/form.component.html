@@ -1,0 +1,7 @@
+<div>
+    @for (field of fields; track field.id) {
+        <app-field [id]="field.id" [label]="field.label" [placeholder]="field.placeholder" [value]="field.value" required (newEntrada)="entrada($event)"></app-field>
+    }
+
+    <app-button message="ENVIAR" (btnSubmit)="emitirClick()"></app-button>
+</div>
