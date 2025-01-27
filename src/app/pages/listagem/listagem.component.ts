@@ -15,15 +15,8 @@ export class ListagemComponent {
   items: ListagemResponse[] = [];
 
   constructor(private listagemService: ListagemService) {}
-  
+
   ngOnInit() {
-    this.listagemService.listar().subscribe({
-      next: (data) => {
-        this.items = data;
-      },
-      error: (err) => {
-        console.error('Erro ao buscar dados:', err);
-      }
-    });
+    this.listagemService.listar().subscribe();
   }
 }

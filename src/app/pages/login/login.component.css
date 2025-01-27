@@ -25,4 +25,24 @@ app-form .form-control:focus {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
   outline: none;
 }
-  
+
+.signup-link {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.signup-link span {
+  margin-right: 4px;
+}
+
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

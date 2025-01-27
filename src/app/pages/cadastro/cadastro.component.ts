@@ -20,9 +20,6 @@ export class CadastroComponent {
   constructor(private cadastroService: CadastroService) {}
 
   onFormSubmit(formData: any) {
-    this.cadastroService.cadastrar(formData).subscribe({
-      next: () => console.log('sucesso'),
-      error: () => console.log('erro')
-    });
+    this.cadastroService.cadastrar(formData).subscribe();
   }
 }
