@@ -21,3 +21,15 @@ Funcionalidades implementadas:
     - Cadastro de usuário
     - Login
     - Listagem de todos os usuários
+
+### Executar 
+Build
+``` sh
+docker build --no-cache -t zaruc .
+```
+
+Execute
+``` sh
+docker run -p 4200:4200 zaruc
+```
+OBS: é importante que esteja na porta 4200 para não dar erro de CORS
