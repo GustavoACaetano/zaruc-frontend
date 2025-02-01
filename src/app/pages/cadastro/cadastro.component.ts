@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { TitleComponent } from '../../components/title/title.component';
 import { FormComponent } from '../../components/form/form.component';
 import { CadastroService } from '../../services/cadastro.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -17,9 +18,13 @@ export class CadastroComponent {
     { id: 'password', label: 'Senha', placeholder: 'Digite uma senha', value: undefined }
   ];
 
-  constructor(private cadastroService: CadastroService) {}
+  constructor(private cadastroService: CadastroService, private router: Router) {}
 
   onFormSubmit(formData: any) {
-    this.cadastroService.cadastrar(formData).subscribe();
+    this.cadastroService.cadastrar(formData).subscribe({
+      error: (data) => {
+        if (data.status == 200) this.router.navigate(['/login']);
+      }
+    });
   }
 }
