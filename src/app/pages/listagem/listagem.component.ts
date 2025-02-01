@@ -17,6 +17,8 @@ export class ListagemComponent {
   constructor(private listagemService: ListagemService) {}
 
   ngOnInit() {
-    this.listagemService.listar().subscribe();
+    this.listagemService.listar().subscribe(
+      data => this.items = data
+    );
   }
 }

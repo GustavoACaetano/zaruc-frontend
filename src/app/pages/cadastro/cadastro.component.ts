@@ -22,6 +22,7 @@ export class CadastroComponent {
 
   onFormSubmit(formData: any) {
     this.cadastroService.cadastrar(formData).subscribe({
+      next: data => this.router.navigate(['/login']),
       error: (data) => {
         if (data.status == 200) this.router.navigate(['/login']);
       }
