@@ -6,7 +6,7 @@ import { ListagemResponse } from '../types/listagem-response.type';
   providedIn: 'root'
 })
 export class ListagemService {
-  private url = 'http://localhost:8080/api/UserService/users'
+  private url = 'http://localhost:8080/api/users'
 
   constructor(private http: HttpClient) { }
 
