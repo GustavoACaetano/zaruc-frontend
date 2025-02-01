@@ -1,29 +1,36 @@
-# Zaruc
+# Zaruc - Frontend
 
 ## Relatório de desenvolvimento
 
-1 - Estudo sobre Angular (iniciando do 0)
-2 - Estudo sobre sintaxe e componentização
-3 - Criação do projeto
-4 - Criação das páginas (login, cadastro, listagem) e componentes
-5 - Ajustes sobre passagem de informações por componentes
-Obs: Não está sendo feito de forma como deveria, a emissão está sendo manual
-6 - Integração entre páginas
-7 - Integração com rotas de backend:
-    - Cadastro
-    - Login
-    - Listagem
-8 - Docker
+1 - Estudo sobre Angular (iniciando do 0). <br>
 
+2 - Estudo sobre sintaxe e componentização. <br>
+
+3 - Criação do projeto. <br>
+
+4 - Criação das páginas (login, cadastro, listagem) e componentes. <br>
+
+5 - Ajustes sobre passagem de informações por componentes. Obs: Não está sendo feito de forma como deveria, a emissão está sendo manual. <br>
+
+6 - Integração entre páginas. <br>
+
+7 - Integração com rotas de backend: <br>
+
+- Cadastro <br>
+- Login <br>
+- Listagem <br>
+
+8 - Docker<br>
+<br>
 ## Documentação
 
-Funcionalidades implementadas:
-    - Cadastro de usuário
-    - Login
-    - Listagem de todos os usuários
+### Funcionalidades implementadas: <br>
+  - Cadastro de usuário
+  - Login
+  - Listagem de todos os usuários
 
 ### Executar 
-Build
+Build 
 ``` sh
 docker build --no-cache -t zaruc .
 ```
