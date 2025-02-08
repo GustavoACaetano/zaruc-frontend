@@ -11,7 +11,7 @@ import { ListagemResponse } from '../../types/listagem-response.type';
   styleUrl: './listagem.component.css'
 })
 export class ListagemComponent {
-  headers = ['Nome', 'Login', 'Senha'];
+  headers = ['Id', 'Login', 'Nome'];
   items: ListagemResponse[] = [];
 
   constructor(private listagemService: ListagemService) {}
