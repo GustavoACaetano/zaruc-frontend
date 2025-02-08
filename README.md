@@ -40,3 +40,9 @@ Execute
 docker run -p 4200:4200 zaruc
 ```
 OBS: é importante que esteja na porta 4200 para não dar erro de CORS
+
+### Testes automáticos
+Execute
+``` sh
+ng test
+```
