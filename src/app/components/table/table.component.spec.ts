@@ -16,10 +16,12 @@ describe('TableComponent', () => {
     fixture.detectChanges();
   });
 
+  // Verificacao se o componente foi criado
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
+  // Verificacao se os headers da tabela foram carregados
   it('should render headers correctly', () => {
     component.headers = ['ID', 'Name', 'Age', 'City'];
     fixture.detectChanges();
@@ -32,6 +34,7 @@ describe('TableComponent', () => {
     expect(headers[3].nativeElement.textContent.trim()).toBe('City');
   });
 
+  // Verificacao se as linhas foram carregadas
   it('should render rows correctly', () => {
     component.items = [
       { id: 1, name: 'Alice', age: 25, city: 'New York' },
@@ -43,6 +46,7 @@ describe('TableComponent', () => {
     expect(rows.length).toBe(2);
   });
 
+  // Verificacao se os dados foram carregados
   it('should render cell values correctly', () => {
     component.items = [
       { id: 1, name: 'Alice', age: 25, city: 'New York' }
@@ -50,13 +54,14 @@ describe('TableComponent', () => {
     fixture.detectChanges();
 
     const cells = fixture.debugElement.queryAll(By.css('tbody td'));
-    expect(cells.length).toBe(4); // Agora verificamos 4 colunas, incluindo ID
+    expect(cells.length).toBe(4);
     expect(cells[0].nativeElement.textContent.trim()).toBe('1');
     expect(cells[1].nativeElement.textContent.trim()).toBe('Alice');
     expect(cells[2].nativeElement.textContent.trim()).toBe('25');
     expect(cells[3].nativeElement.textContent.trim()).toBe('New York');
   });
 
+  // Verificacao se o componente comporta listas vazias
   it('should handle empty items array', () => {
     component.items = [];
     fixture.detectChanges();
@@ -65,8 +70,9 @@ describe('TableComponent', () => {
     expect(rows.length).toBe(0);
   });
 
+  // Verificacao se o trackById esta funcionando
   it('should use trackBy function correctly', () => {
     const item = { id: 1, name: 'Alice', age: 25 };
-    expect(component.trackBy(0, item)).toBe(1); // trackBy deve retornar o id do item
+    expect(component.trackBy(0, item)).toBe(1);
   });
 });

@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing'; // Import necessário
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ListagemService } from './listagem.service';
 
 describe('ListagemService', () => {
@@ -7,7 +7,7 @@ describe('ListagemService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule] // Adicione este módulo
+      imports: [HttpClientTestingModule]
     });
     service = TestBed.inject(ListagemService);
   });

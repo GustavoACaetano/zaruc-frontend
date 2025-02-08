@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing'; // Import necessário
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CadastroService } from './cadastro.service';
 
 describe('CadastroService', () => {
@@ -7,7 +7,7 @@ describe('CadastroService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule] // Adicione este módulo
+      imports: [HttpClientTestingModule]
     });
     service = TestBed.inject(CadastroService);
   });

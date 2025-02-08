@@ -14,13 +14,11 @@ export class LoginService {
     console.log('Dados enviados para o serviço:', data);
     return this.http.post<{ token: string }>(this.url, data).pipe(
       tap((response) => {
-        // Armazena o token no localStorage
         localStorage.setItem('authToken', response.token);
       })
     );
   }
 
-  // Método para obter o token armazenado
   getToken(): string | null {
     return localStorage.getItem('authToken');
   }

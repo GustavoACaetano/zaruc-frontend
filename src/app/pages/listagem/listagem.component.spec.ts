@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HttpClientTestingModule } from '@angular/common/http/testing'; // Import necessário
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ListagemComponent } from './listagem.component';
 
 describe('ListagemComponent', () => {
@@ -18,6 +18,7 @@ describe('ListagemComponent', () => {
     fixture.detectChanges();
   });
 
+  // Verificacao se o componente foi criado
   it('should create', () => {
     expect(component).toBeTruthy();
   });

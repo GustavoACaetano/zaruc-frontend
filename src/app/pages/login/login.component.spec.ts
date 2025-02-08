@@ -14,7 +14,7 @@ describe('LoginComponent', () => {
       providers: [
         {
           provide: ActivatedRoute,
-          useValue: { params: of({}) } // Mock do ActivatedRoute
+          useValue: { params: of({}) }
         }
       ]
     }).compileComponents();
@@ -24,6 +24,7 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
+  // Verificacao se o componente foi criado
   it('should create', () => {
     expect(component).toBeTruthy();
   });

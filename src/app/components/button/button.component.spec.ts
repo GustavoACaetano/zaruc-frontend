@@ -7,7 +7,7 @@ describe('ButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ButtonComponent] // Declare the component
+      imports: [ButtonComponent]
     })
     .compileComponents();
 
@@ -16,10 +16,12 @@ describe('ButtonComponent', () => {
     fixture.detectChanges();
   });
 
+  // Verificacao se o componente foi criado
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
+  // Verificacao se existe a emissao no click do botao
   it('should emit event on button click', () => {
     spyOn(component.btnSubmit, 'emit');
     const button = fixture.nativeElement.querySelector('button');
@@ -27,6 +29,7 @@ describe('ButtonComponent', () => {
     expect(component.btnSubmit.emit).toHaveBeenCalled();
   });
 
+  // Verificacao se a mensagem escrita esta correta
   it('should display the correct message', () => {
     component.message = 'Click Me';
     fixture.detectChanges();

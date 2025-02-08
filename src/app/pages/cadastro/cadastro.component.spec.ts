@@ -19,6 +19,7 @@ describe('CadastroComponent', () => {
     fixture.detectChanges();
   });
 
+  // Verificacao se o componente foi criado
   it('should create', () => {
     expect(component).toBeTruthy();
   });

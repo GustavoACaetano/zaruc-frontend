@@ -17,10 +17,12 @@ describe('FieldComponent', () => {
     fixture.detectChanges();
   });
 
+  // Verificacao se o componente foi criado
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
+  // Verificacao se a label carregou 
   it('should render the label correctly', () => {
     component.label = 'Test Label';
     fixture.detectChanges();
@@ -28,6 +30,7 @@ describe('FieldComponent', () => {
     expect(labelElement.textContent).toContain('Test Label');
   });
 
+  // Verificacao se a placeholder esta correta
   it('should render the placeholder correctly', () => {
     component.placeholder = 'Test Placeholder';
     fixture.detectChanges();
@@ -35,6 +38,7 @@ describe('FieldComponent', () => {
     expect(inputElement.placeholder).toContain('Test Placeholder');
   });
 
+  // Verificacao se o id carregou corretamente
   it('should render the id correctly', () => {
     component.id = 'test-id';
     fixture.detectChanges();
@@ -42,6 +46,7 @@ describe('FieldComponent', () => {
     expect(inputElement.id).toContain('test-id');
   });
 
+  // Verificacao se a emissao de entrada funcionou
   it('should emit newEntrada event when input changes', () => {
     spyOn(component.newEntrada, 'emit');
     const inputElement = fixture.nativeElement.querySelector('input');

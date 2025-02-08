@@ -18,10 +18,12 @@ describe('FormComponent', () => {
     fixture.detectChanges();
   });
 
+  // Verificacao se o componente foi criado
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
+  // Verificacao se o numero de campos esta correto
   it('should render the correct number of fields', () => {
     component.fields = [
       { id: 'name', label: 'Name', placeholder: 'Enter name' },
@@ -33,6 +35,7 @@ describe('FormComponent', () => {
     expect(fieldComponents.length).toBe(2);
   });
 
+  // Verificacao se o valor do campo esta mudando com o input
   it('should update field value on input event', () => {
     component.fields = [
       { id: 'name', label: 'Name', placeholder: 'Enter name', value: '' }
@@ -45,6 +48,7 @@ describe('FormComponent', () => {
     expect(component.fields[0].value).toBe(newValue);
   });
 
+  // Verificacao se a emissao esta enviando os valores corretos
   it('should emit formSubmit event with correct values', () => {
     spyOn(component.formSubmit, 'emit');
 
