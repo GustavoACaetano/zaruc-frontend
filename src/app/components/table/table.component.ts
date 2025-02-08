@@ -10,5 +10,9 @@ export class TableComponent {
   @Input() items: any[] = [];
 
   objectKeys = Object.keys;
+
+  trackBy(index: number, item: any): any {
+    return item.id;
+  }
 }
 

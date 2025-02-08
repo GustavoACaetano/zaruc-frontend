@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ButtonComponent } from './button.component';
 
 describe('ButtonComponent', () => {
@@ -8,7 +7,7 @@ describe('ButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ButtonComponent]
+      imports: [ButtonComponent] // Declare the component
     })
     .compileComponents();
 
@@ -19,5 +18,19 @@ describe('ButtonComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should emit event on button click', () => {
+    spyOn(component.btnSubmit, 'emit');
+    const button = fixture.nativeElement.querySelector('button');
+    button.click();
+    expect(component.btnSubmit.emit).toHaveBeenCalled();
+  });
+
+  it('should display the correct message', () => {
+    component.message = 'Click Me';
+    fixture.detectChanges();
+    const button = fixture.nativeElement.querySelector('button');
+    expect(button.textContent).toContain('Click Me');
   });
 });
